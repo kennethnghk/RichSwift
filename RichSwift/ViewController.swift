@@ -27,11 +27,9 @@ class ViewController: UIViewController {
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         print("button is pressed")
-//        diceImageView1.image = UIImage(named: "dice1")
-//        diceImageView2.image = UIImage(named: "dice2")
         
-        diceImageView1.image = UIImage(named: dices[Int.random(in: 0...5)])
-        diceImageView2.image = UIImage(named: dices[Int.random(in: 0...5)])
+        diceImageView1.image = UIImage(named: dices.randomElement() ?? "dice1")
+        diceImageView2.image = UIImage(named: dices.randomElement() ?? "dice1")
         
     }
     
